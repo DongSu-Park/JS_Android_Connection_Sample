@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">webview_connect</string>
+    <string name="dummy1"><![CDATA[<native call back>]]></string>
+</resources>

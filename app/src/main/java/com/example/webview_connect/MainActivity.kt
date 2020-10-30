@@ -28,7 +28,10 @@ class MainActivity : AppCompatActivity() {
         }, "WebViewCallbackInterface")
 
         btn_nativeCallBack.setOnClickListener {
-            wv_welcome.evaluateJavascript("javascript:appToWebView(${et_text.text});") {}
+            val textMessage : String = et_text.text.toString()
+            wv_welcome.evaluateJavascript("javascript:appToWebView('$textMessage')") {
+                value -> Toast.makeText(this, "js 전송 성공 : $value", Toast.LENGTH_LONG).show()
+            }
         }
     }
 

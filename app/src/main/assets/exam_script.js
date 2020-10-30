@@ -4,5 +4,6 @@ function webViewToApp(){
 }
 
 function appToWebView(getNativeText){
-    document.getElementById('nativeText').innerText = getNativeText;
+    document.getElementById('nativeText').innerText = getNativeText
+    return getNativeText
 }
